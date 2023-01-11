@@ -1,6 +1,7 @@
 import React from 'react'
 import { createContext, useReducer } from 'react'
 import GithubReducer from './GithubReducer'
+
 const GithubContext = createContext()
 
 const GITHUB_URL = process.env.REACT_APP_GITHUB_URL
@@ -39,12 +40,12 @@ export const GithubProvider = ({children})=>{
     const params = new URLSearchParams({
       q: text,
     })
-    const response = await fetch(`${GITHUB_URL}/search/users?${params}$`, {
+    const response = await fetch(`${GITHUB_URL}/search/users?${params}`, {
       headers: {
         Authorization: `token ${GITHUB_TOKEN}`,
       },
     });
-    const {items} = await response.json();
+    const { items } = await response.json();
     dispatch({
       type: 'GET_USERS',
       payload: items,
@@ -55,8 +56,8 @@ export const GithubProvider = ({children})=>{
   return <GithubContext.Provider value={{
     // users, 
     // loading,
-    users:state.users,
-    loading:state.loading,
+    users: state.users,
+    loading: state.loading,
     searchUsers,
   }}>
     {children}
