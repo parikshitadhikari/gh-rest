@@ -3,7 +3,7 @@ import UserResults from '../users/UserResults'
 
 function Home() {
   return (
-    <div className='mt-4 ml-4'><UserResults/></div>
+    <div className='m-4'><UserResults/></div>
   )
 }
 
