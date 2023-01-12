@@ -7,23 +7,26 @@ import Home from "./components/pages/Home";
 import NotFound from "./components/pages/NotFound";
 import Footer from "./components/layout/Footer";
 import { GithubProvider } from "./context/github/GithubContext";
+import { AlertProvider } from "./context/alert/AlertContext";
 
 function App() {
   return (
     <GithubProvider>
-      <BrowserRouter>
-        <div className="flex flex-col justify-between h-screen">
-          <Navbar />
-          <div className="container mx-auto">
-          <Routes>
-            <Route path="/" exact element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/*" element={<NotFound />} />
-          </Routes>
+      <AlertProvider>
+        <BrowserRouter>
+          <div className="flex flex-col justify-between h-screen">
+            <Navbar />
+            <div className="container mx-auto">
+              <Routes>
+                <Route path="/" exact element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/*" element={<NotFound />} />
+              </Routes>
+            </div>
+            <Footer />
           </div>
-          <Footer />
-        </div>
-      </BrowserRouter>
+        </BrowserRouter>
+      </AlertProvider>
     </GithubProvider>
   );
 }
