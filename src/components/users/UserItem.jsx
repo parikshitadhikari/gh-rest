@@ -11,7 +11,7 @@ function UserItem({ user: { login, avatar_url } }) {
         </div>
         <div className="flex flex-col justify-center">
             <h3 className="font-bold text-white">{login}</h3>
-            <Link to={`/users/${login}`} className="text-sm font-serif">Visit Profile</Link>
+            <Link to={`/user/${login}`} className="text-sm font-serif">Visit Profile</Link>
         </div>
       </div>
     </div>
