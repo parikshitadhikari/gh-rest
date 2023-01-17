@@ -22,6 +22,12 @@ function GithubReducer(state,action) {
             ...state,
             users:[]
         }
+    case 'GET_REPOST':
+        return{
+            ...state,
+            repos:action.payload,
+            loading:false,
+        }
     default:
         return state;
   }

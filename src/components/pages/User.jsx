@@ -5,12 +5,14 @@ import { useParams } from "react-router-dom";
 import GithubContext from "../../context/github/GithubContext";
 import { Link } from "react-router-dom";
 import Spinner from "../layout/Spinner";
+import RepoList from "../repos/RepoList";
 
 function User() {
-  const { getUser, user, loading } = useContext(GithubContext);
+  const { getUser, user, loading , getUserRepos, repos} = useContext(GithubContext);
   const params = useParams();
   useEffect(() => {
     getUser(params.login);
+    getUserRepos(params.login);
   }, []);
   //destructuring all of the following from user object
   const {
@@ -35,7 +37,7 @@ function User() {
   return (
     <React.Fragment>
       <div>
-        <div className="mb-4">
+        <div className="mb-4 mt-4">
           <Link
             to="/"
             className="ml-4 md:ml-10 bg-yellow-200 text-black p-2 rounded-lg hover:bg-yellow-400"
@@ -154,6 +156,7 @@ function User() {
             </div>
           </div>
         </div>
+        <RepoList repos={repos}/>
       </div>
     </React.Fragment>
   );
