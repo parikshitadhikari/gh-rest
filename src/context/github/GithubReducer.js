@@ -22,7 +22,7 @@ function GithubReducer(state,action) {
             ...state,
             users:[]
         }
-    case 'GET_REPOST':
+    case 'GET_REPOS':
         return{
             ...state,
             repos:action.payload,
