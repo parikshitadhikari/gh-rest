@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import RepoItem from "./RepoItem";
 
 function RepoList({ repos }) {
   return (
@@ -7,7 +8,7 @@ function RepoList({ repos }) {
       <div className="p-4">
         <h2 className="font-bold text-white mb-2">Top Repositories:</h2>
         {repos.map((repo) => {
-          return <h1 className="text-white text-sm">{repo.name}</h1>;
+          return <RepoItem key={repo.id} repo={repo}/>
         })}
       </div>
     </div>
