@@ -56,25 +56,101 @@ function User() {
                 <p>{login}</p>
               </div>
             </div>
-            
           </div>
           <div className="col-span-2 ml-4 text-white">
             <div className="mb-6">
               <h1 className="text-xl md:text-3xl card-title">
                 {name}
-                <div className="ml-2 mr-1 badge badge-success">
-                  {type}
-                </div>
+                <div className="ml-2 mr-1 badge badge-success">{type}</div>
                 {hireable && (
-                  <div className="mx-1 badge badge-info">
-                    Hireable
-                  </div>
+                  <div className="mx-1 badge badge-info">Hireable</div>
                 )}
               </h1>
               <p>{bio}</p>
               <div className="mt-2">
-                <a className="bg-transparent p-2 rounded-lg border border-white hover:bg-slate-500" href={html_url} target='_blank' rel="noreferrer">Visit Github Profile</a>
+                <a
+                  className="bg-transparent p-2 rounded-lg border border-white hover:bg-slate-500"
+                  href={html_url}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Visit Github Profile
+                </a>
               </div>
+            </div>
+            <div className="w-full text-white rounded-lg shadow-xl bg-base-200 stats">
+              {location && (
+                <div className="p-4">
+                  <div className="text-md font-light">Location</div>
+                  <div className="text-lg font-bold font-serif">{location}</div>
+                </div>
+              )}
+              {blog && (
+                <div className="p-4">
+                  <div className="text-md font-light">Website</div>
+                  <div className="text-lg font-bold font-serif">
+                    <a
+                      href={`https://${blog}`}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {blog}
+                    </a>
+                  </div>
+                </div>
+              )}
+              {twitter_username && (
+                <div className="p-4">
+                  <div className="text-md font-light">Twitter</div>
+                  <div className="text-lg font-bold font-serif">
+                    <a
+                      href={`https://twitter.com/${twitter_username}`}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {twitter_username}
+                    </a>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+        <div className="w-full py-5 mt-6 mb-6 rounded-lg shadow-md bg-base-200 stats">
+          <div className="flex justify-between">
+            <div className="ml-4 text-white">
+              <div className="pr-5 font-light">Followers</div>
+              <div className="pr-5 text-3xl md:text-4xl font-bold ">{followers}</div>
+            </div>
+            <div className="mr-4">
+              <FaUsers className="text-3xl md:text-5xl " />
+            </div>
+          </div>
+          <div className="flex justify-between">
+            <div className="ml-4 text-white">
+              <div className="pr-5 font-light">Following</div>
+              <div className="pr-5 text-3xl md:text-4xl font-bold ">{following}</div>
+            </div>
+            <div className="mr-4">
+              <FaUserFriends className="text-3xl md:text-5xl " />
+            </div>
+          </div>
+          <div className="flex justify-between">
+            <div className="ml-4 text-white">
+              <div className="pr-5 font-light">Public Repos</div>
+              <div className="pr-5 text-3xl md:text-4xl font-bold ">{public_repos}</div>
+            </div>
+            <div className="mr-4">
+              <FaCodepen className="text-3xl md:text-5xl " />
+            </div>
+          </div>
+          <div className="flex justify-between">
+            <div className="ml-4 text-white">
+              <div className="pr-5 font-light">Public Gists</div>
+              <div className="pr-5 text-3xl md:text-4xl font-bold ">{public_gists}</div>
+            </div>
+            <div className="mr-4">
+              <FaStore className="text-3xl md:text-5xl " />
             </div>
           </div>
         </div>
