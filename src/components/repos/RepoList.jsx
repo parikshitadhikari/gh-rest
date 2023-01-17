@@ -5,9 +5,9 @@ function RepoList({ repos }) {
   return (
     <div className="rounded-lg shadow-lg bg-base-200 mb-6">
       <div className="p-4">
-        <h2 className="font-bold text-white">Top Repositories:</h2>
+        <h2 className="font-bold text-white mb-2">Top Repositories:</h2>
         {repos.map((repo) => {
-          <h1>{repo.name}</h1>;
+          return <h1 className="text-white text-sm">{repo.name}</h1>;
         })}
       </div>
     </div>
