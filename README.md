@@ -7,7 +7,7 @@ This is a frontend project built using [React](https://reactjs.org/) and [GitHub
 In the project directory, you can run:
 
 ### `npm i`
-Install all the required npm packages
+Installs all the required npm packages
 
 ### `npm start`
 
