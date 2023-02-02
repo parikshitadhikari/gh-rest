@@ -35,7 +35,7 @@ function Navbar({ title }) {
   );
 }
 Navbar.defaultProps = {
-  title: "Github Finder",
+  title: "GH - REST",
 };
 Navbar.propTypes = {
   title: PropTypes.string,
