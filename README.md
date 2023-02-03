@@ -9,6 +9,14 @@ In the project directory, you can run:
 ### `npm i`
 Installs all the required npm packages
 
+### Setting up environment variables:
+1. Create a .env file in the root directory
+
+2. Add the following lines to the .env file
+`REACT_APP_GITHUB_URL = "https://api.github.com"`
+
+`REACT_APP_GITHUB_TOKEN = "<add your github access token here>"`
+
 ### `npm start`
 
 Runs the app in the development mode.\
