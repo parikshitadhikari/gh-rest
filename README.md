@@ -12,12 +12,13 @@ Installs all the required npm packages
 ### Setting up environment variables:
 1. Create a .env file in the root directory
 
-2. Add the following lines to the .env file
+2. Add the following lines to the .env file:
+
 `REACT_APP_GITHUB_URL = "https://api.github.com"`
 
 `REACT_APP_GITHUB_TOKEN = "<add your github access token here>"`
 
-TO generate personal access token, open github, then goto: settings -> developer settings -> Personal access tokens -> Tokens (classic) -> Generate new token (classic) -> add note and generate new token.
+T generate personal access token, open github, then goto: settings -> developer settings -> Personal access tokens -> Tokens (classic) -> Generate new token (classic) -> add note and generate new token.
 
 ### `npm start`
 
