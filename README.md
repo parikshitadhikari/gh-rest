@@ -18,7 +18,7 @@ Installs all the required npm packages
 
 `REACT_APP_GITHUB_TOKEN = "<add your github access token here>"`
 
-T generate personal access token, open github, then goto: settings -> developer settings -> Personal access tokens -> Tokens (classic) -> Generate new token (classic) -> add note and generate new token.
+To generate personal access token, open github, then goto: settings -> developer settings -> Personal access tokens -> Tokens (classic) -> Generate new token (classic) -> add note and generate new token.
 
 ### `npm start`
 
