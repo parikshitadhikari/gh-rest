@@ -1,6 +1,5 @@
-# About the project
 
-This is a frontend project built using [React](https://reactjs.org/) and [GitHub's rest api](https://docs.github.com/en/rest?apiVersion=2022-11-28).
+GH-REST is a frontend project built using [React](https://reactjs.org/) and [GitHub's rest api](https://docs.github.com/en/rest?apiVersion=2022-11-28).
 
 # Running the project:
 
