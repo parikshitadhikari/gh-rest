@@ -2,7 +2,7 @@
 
 This is a frontend project built using [React](https://reactjs.org/) and [GitHub's rest api](https://docs.github.com/en/rest?apiVersion=2022-11-28).
 
-## Running the project:
+# Running the project:
 
 In the project directory, you can run:
 
@@ -30,7 +30,5 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## Create React App
-
-Learn about [Create React App](https://facebook.github.io/create-react-app/docs/getting-started).
-
+# Project URL
+gh-rest.vercel.app
